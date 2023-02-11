@@ -1,7 +1,7 @@
 # nnrm
 
-English Docs | [中文文档](./README.zh-CN.md)
+[English Docs](./README.md) | 中文文档
 
-## 完全fork [nnrm](https://github.com/YunYouJun/nnrm)
+## 完全 fork [nnrm](https://github.com/YunYouJun/nnrm)
 
 - 增加 `nrm current` 选项

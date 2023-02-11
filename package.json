@@ -1,0 +1,63 @@
+{
+  "name": "@runafe/rnrm",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "New npm registry manager forked of nnrm (https://github.com/YunYouJun/nnrm)",
+  "main": "index.js",
+  "packageManager": "pnpm@7.26.3",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "rnrm": "index.js",
+    "nrm": "index.js",
+    "nyrm": "yrm.js",
+    "prm": "prm.js",
+    "yrm": "yrm.js"
+  },
+  "engines": {
+    "node": ">=12.x"
+  },
+  "files": [
+    "index.js",
+    "yrm.js",
+    "prm.js",
+    "utils",
+    "registries.json"
+  ],
+  "keywords": [
+    "fork of nnrm",
+    "npm",
+    "registry",
+    "toggle",
+    "manager"
+  ],
+  "repository": "https://github.com/wangxdmm/rnrm",
+  "license": "MIT",
+  "scripts": {
+    "coverage": "vitest run --coverage",
+    "dev": "node index.js",
+    "ls": "node index.js ls",
+    "test": "pnpm ls && pnpm test:add && pnpm test:remove && pnpm test:test",
+    "test:add": "node index.js add yyj https://www.yunyoujun.cn",
+    "test:remove": "node index.js remove yyj",
+    "test:test": "node index.js test",
+    "test:use": "node index.js use taobao",
+    "test:current": "node index.js current",
+    "test:basic": "vitest",
+    "postinstall": "node index.js ls",
+    "release": "bumpp --commit --push --tag"
+  },
+  "dependencies": {
+    "cac": "^6.7.14",
+    "execa": "^6.1.0",
+    "node-fetch": "^3.2.10",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@vitest/coverage-c8": "^0.24.3",
+    "bumpp": "^8.2.1",
+    "vite": "^3.2.0",
+    "vitest": "^0.24.3"
+  }
+}

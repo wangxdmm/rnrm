@@ -1,6 +1,6 @@
 {
   "name": "@runafe/rnrm",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "description": "New npm registry manager forked of nnrm (https://github.com/YunYouJun/nnrm)",
   "main": "index.js",
